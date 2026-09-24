@@ -1,0 +1,34 @@
+
+/*********************************************
+Your name: Ayomide Oludairo
+
+Question 2: 
+
+My system has 7942 MB of total memory, and it has 2084 used, and 169 free. 
+I have 5857 available memory and 62 MB shared, and 6066 MB buff/cache.
+
+Question 4: 
+
+When the ./memory-user program is running my used memory increased, however the 
+free memory decreased to 146 MB. Shared increased by 3, buff/cache
+changed to 6224 and the available went to 5990. When I run free -m again multiple
+times the numbers change, they never stay the same. This indicates to me some memory usage 
+is going on and the system is not stagnant. When I kill the program, the numbers rise back up,
+and stay relatively the same when I keep re-running free -m.
+
+Question 7: 
+
+When I ran pmap and pmap -X on my memory-user process, I saw that the address space contained many different memory mappings.
+Instead of only having code, a heap, and a stack, it also contained anonymous memory regions, and shared libraries 
+such as libc.so.6. I also noticed that different regions had different permissions, such as read, write, and execute. 
+This shows that a modern process's address space is made up of many different entities and is much more complex than the simple 
+code/heap/stack model.
+
+Question 8: 
+
+When I ran pmap -X on my memory-user program with different amounts of memory, I saw the size of the large anonymous memory 
+region increase with the amount I requested. With 10 MB, the region was 10,256 KB; with 100 MB, it was 102,416 KB; and with 
+500 MB, it was 512,016 KB. The total memory shown by pmap also increased from 12,932 KB to 105,092 KB and then 514,692 KB. 
+This matched my expectations because increasing the amount of memory allocated by memory-user should increase the size of 
+its address space.
+*********************************************/
